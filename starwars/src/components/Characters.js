@@ -14,15 +14,15 @@ margin-top:2%;
 
 `; 
 
-    const NewCard = styled.div`
-    box-shadow: 5px 10px 50px;
+const NewCard = styled.div`
+box-shadow: 5px 10px 50px;
 background-color:white;
 width:50%;
 `;
 
 function Characters(props) {
 
-    console.log(props);
+    // console.log(props);
 
     return (
         <NewDiv>

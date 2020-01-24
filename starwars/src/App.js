@@ -10,13 +10,13 @@ const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
-  const [people, setPeople] = useState([]);
+  const [chars, setChars] = useState([]);
 
     useEffect(() => {
     axios.get("https://swapi.co/api/people/")
     .then((response) => {
       // console.log(response.data.results);
-        setPeople(response.data.results);
+        setChars(response.data.results);
     }).catch(error => {
       console.log("The data could not be returned. ", error);
     })
@@ -29,13 +29,11 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-        
-        {people.map((people) => {
+        {chars.map((item) => {
          return (
-            <Characters people={people}/>
+            <Characters people={item}/>
           );
         })}
-        
     </div>
   );
 }
